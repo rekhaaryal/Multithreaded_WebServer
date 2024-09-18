@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -35,5 +36,9 @@ public class Client {
         }
         
     }
+=======
+
+public class Client {
+>>>>>>> 1fd843b (Implemented multithreaded server using lambdas and consumer interface)
     
 }
