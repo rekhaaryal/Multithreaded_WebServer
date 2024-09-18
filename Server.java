@@ -1,4 +1,6 @@
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -20,6 +22,8 @@ public class Server {
 
                     System.out.println("Connection is accepted from the client" + acceptedConnection.getRemoteSocketAddress());
                     PrintWriter toClient = new PrintWriter(acceptedConnection.getOutputStream());
+                    BufferedReader fromClint = new BufferedReader(new InputStreamReader(acceptedConnection.getInputStream()));
+                    toClient.println("Hello from the server");
 
                 } catch (IOException ex) {
                     ex.printStackTrace();
